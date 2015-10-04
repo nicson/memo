@@ -16,7 +16,6 @@ print(dateFormatter.stringFromDate(NSDate()))               // 現在日時
 >Program ended with exit code: 0
 
 #### 関数返却関数
-
 ```swift
 func priceFunc(age age:Int) -> (Int) -> Int {
     //for child function
@@ -33,7 +32,6 @@ func priceFunc(age age:Int) -> (Int) -> Int {
         return adultPrice
     }
 }
-
 let age10Func = priceFunc(age: 10)
 let price = age10Func(2)
 print(price)
@@ -45,7 +43,6 @@ print(price2)
 #### クロージャ
 
 * __Mapメソッド (写像関数)__
-
 ```swift
 let numbers = [4,7,2,9]
 let array1 = numbers.map({ (v:Int) -> Int in
@@ -61,11 +58,57 @@ print(array1,array2,array3,array4)
 >[8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18]
 >Program ended with exit code: 0
 
+* __sortメソッド__
+```swift
+let stringArray = ["orange", "Apple", "lemon", "Peach"]
+let sortedStringArray = stringArray.sort{ $0.uppercaseString < $1.uppercaseString }
+print(sortedStringArray)
+```
+実行結果
+>["Apple", "lemon", "orange", "Peach"]
+>Program ended with exit code: 0
+
+* __クロージャを引数にする自作関数の例__
+```swift
+//自作クロージャを引数に持つ関数
+func show(a:Int,b:Int,c:Int, execfunc :(Int,Int,Int) -> Int){
+    print(execfunc(a,b,c))
+}
+func calc(a:Int, b:Int, c:Int) -> Int {
+    return a + b + c
+}
+//関数をそのまま渡す
+show(1, b: 2, c: 3, execfunc: calc)
+//クロージャを渡す
+show(1, b: 2, c: 3, execfunc: {(a:Int, b:Int, c:Int) -> Int in
+    return a + b + c
+})
+//返却値を推論して省略
+show(1, b: 2, c: 3, execfunc: {(a:Int, b:Int, c:Int)  in
+    return a + b + c
+})
+//引数型も推論して省略
+show(1, b: 2, c: 3, execfunc: {(a,b,c)  in
+    return a + b + c
+})
+//クロージャが一つのため、外だしできる
+show(1, b: 2, c: 3){(a,b,c) in
+    return a + b + c
+}
+//引数は$0,$1,$2...で取得できる
+show(1, b: 2, c: 3){ $0 + $1 + $2 }
+```
+実行結果
+>6
+>6
+>6
+>6
+>6
+>6
+>Program ended with exit code: 0
 
 * __引数なし、Void返却型のクロージャの書き方__
-
 ```swift
-
 //void argument and void return value type closure
 //case1
 var voidFunc = { () -> Void in
