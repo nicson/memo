@@ -55,7 +55,7 @@ let array4 = numbers.map{ return $0*2 } //クロージャの引数は$0,$1,$2...
 print(array1,array2,array3,array4)
 ```
 実行結果
->[8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18]
+>[8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18] [8, 14, 4, 18]  
 >Program ended with exit code: 0
 
 * __sortメソッド__
