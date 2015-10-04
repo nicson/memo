@@ -46,7 +46,7 @@ print(price2)
 
 * ###### Mapメソッド (写像関数)
 
-```csharp
+```swift
 let numbers = [4,7,2,9]
 let array1 = numbers.map({ (v:Int) -> Int in
     return v*2
@@ -64,7 +64,7 @@ print(array1,array2,array3,array4)
 
 * ###### 引数なし、Void返却型のクロージャの書き方
 
-```csharp
+```swift
 
 //void argument and void return value type closure
 //case1
