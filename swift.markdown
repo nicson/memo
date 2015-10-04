@@ -44,7 +44,7 @@ print(price2)
 
 #### クロージャ
 
-* ###### Mapメソッド (写像関数)
+* __Mapメソッド (写像関数)__
 
 ```swift
 let numbers = [4,7,2,9]
@@ -62,7 +62,7 @@ print(array1,array2,array3,array4)
 >Program ended with exit code: 0
 
 
-* ###### 引数なし、Void返却型のクロージャの書き方
+* __引数なし、Void返却型のクロージャの書き方__
 
 ```swift
 
