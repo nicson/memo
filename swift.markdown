@@ -12,7 +12,7 @@ print(dateFormatter.stringFromDate(NSDate()))               // 現在日時
 ```
 
 実行結果
->2015/10/04 11:53:40
+>2015/10/04 11:53:40  
 >Program ended with exit code: 0
 
 #### 関数返却関数
@@ -65,7 +65,7 @@ let sortedStringArray = stringArray.sort{ $0.uppercaseString < $1.uppercaseStrin
 print(sortedStringArray)
 ```
 実行結果
->["Apple", "lemon", "orange", "Peach"]
+>["Apple", "lemon", "orange", "Peach"]  
 >Program ended with exit code: 0
 
 * __クロージャを引数にする自作関数の例__
@@ -99,12 +99,12 @@ show(1, b: 2, c: 3){(a,b,c) in
 show(1, b: 2, c: 3){ $0 + $1 + $2 }
 ```
 実行結果
->6
->6
->6
->6
->6
->6
+>6  
+>6  
+>6  
+>6  
+>6  
+>6  
 >Program ended with exit code: 0
 
 * __引数なし、Void返却型のクロージャの書き方__
@@ -125,7 +125,7 @@ voidFunc = {print("void: case3")}
 voidFunc()
 ```
 実行結果
->void: case1
->void: case2
->void: case3
+>void: case1  
+>void: case2  
+>void: case3  
 >Program ended with exit code: 0
