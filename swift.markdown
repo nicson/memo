@@ -50,7 +50,7 @@ let array1 = numbers.map({ (v:Int) -> Int in
 })
 //こうもかける
 let array2 = numbers.map({ v in return v*2 }) //推論で、型を省略
-let array3 = numbers.map{ v in return v*2 } //クロージャが１つの場合、外だしできる
+let array3 = numbers.map{ v in return v*2 } //引数のうち、最後のクロージャの場合、外だしできる
 let array4 = numbers.map{ return $0*2 } //クロージャの引数は$0,$1,$2...で参照
 print(array1,array2,array3,array4)
 ```
