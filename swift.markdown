@@ -129,3 +129,17 @@ voidFunc()
 >void: case2  
 >void: case3  
 >Program ended with exit code: 0
+
+#### Optional型
+
+* __varとletで宣言したときの違い__  
+varでは初期値にnilが入るが、letではnullになるのでprintでランタイムエラーになる
+```swift
+let oplet:String?
+var opvar:String?
+//print(oplet)  //エラー
+print(opvar)    //nil
+```
+実行結果
+>nil  
+>Program ended with exit code: 0
