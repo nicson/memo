@@ -143,3 +143,30 @@ print(opvar)    //nil
 実行結果
 >nil  
 >Program ended with exit code: 0
+
+#### Class
+
+* __initをつかうinitの定義__
+```swift
+class MyClass {
+    let msg:String
+    let name:String
+    init(msg:String, name:String){
+        self.msg = msg
+        self.name = name
+    }
+    //initをつかうinitにはconvenienceをつける
+    convenience init(msg:String = "hello"){
+        self.init(msg:msg, name:"匿名")
+    }
+    func hello(){
+        let helloMsg = name + "さん。" + msg
+        print(helloMsg)
+    }
+}
+let mc = MyClass(msg: "hello world",name: "ohde")
+mc.hello()
+```
+実行結果
+>ohdeさん。hello world  
+>Program ended with exit code: 0
