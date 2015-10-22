@@ -17,12 +17,11 @@ usb版のwindows10をdisk utilityを使ってisoを作成したら、なぜか
 
 >Windows Registry Editor Version 5.00
 >
->[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
->"Scancode >Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,5b,e0,1d,00,1d,00,5b,e0,1d,e0,5c,e0,00,00,00,00
+>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]  
+>"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,5b,e0,1d,00,1d,00,5b,e0,1d,e0,5c,e0,00,00,00,00
 
 再起動後、commandとcontrolが交換される
 
  * Command + Space で日本語入力
  Commandとcontrolを交換したあとで、IMEを右クリック>プロパティ>詳細設定>編集操作_変更
  でcontrol + Space の入力/変換を　IME-オン/オフに設定
- 
